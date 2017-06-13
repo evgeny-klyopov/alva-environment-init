@@ -32,7 +32,7 @@
     },
     "extra": {
         "branch-alias": {
-            "master": "master"
+            "1.0.0": "master"
         }
     }
 }
