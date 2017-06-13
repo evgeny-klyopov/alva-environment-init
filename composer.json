@@ -29,10 +29,5 @@
         "psr-4": {
             "Alva\\InitEnvironment\\": "src/"
         }
-    },
-    "extra": {
-        "branch-alias": {
-            "1.0.0": "master"
-        }
     }
 }
