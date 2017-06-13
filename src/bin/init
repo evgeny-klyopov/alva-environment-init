@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+require __DIR__.'/vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Alva\InitEnvironment\Console\Add;
+use Alva\InitEnvironment\Console\Remove;
+use Alva\InitEnvironment\Console\ShowList;
+use Alva\InitEnvironment\Console\Load;
+
+define('PATH',                          __DIR__);
+define('DS',                            DIRECTORY_SEPARATOR);
+define('ENVIRONMENT_DIRECTORY_NAME',    'environment.dist');
+define('FILE_GIT_IGNORE',               PATH . DS . '.gitignore');
+define('LANGUAGE',                      'ru');
+
+
+$application = new Application();
+$application->add(new Add());
+$application->add(new Remove());
+$application->add(new ShowList());
+$application->add(new Load());
+$application->run();
